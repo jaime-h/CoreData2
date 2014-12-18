@@ -32,16 +32,19 @@
     NSManagedObject *newContact;
     
     newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Contacts" inManagedObjectContext:context];
-    [newContact setValue:_name.text forKey:@"name"];
+    [newContact setValue:self.name.text    forKey:@"name"];
     [newContact setValue:self.address.text forKey:@"address"];
-    [newContact setValue:self.phone.text forKey:@"phone"];
+    [newContact setValue:self.phone.text   forKey:@"phone"];
     
-    _name.text = @"";
+    self.name.text    = @"";
     self.address.text = @"";
     self.phone.text   = @"";
     
+    // also do not really need to do anything here to save as the context should save automatically
+    // check when it goes to the background - is a weak reference really needed for it to auto save?
+    
     NSError *error;
-    [context save:&error];
+    [context save:&error]; // Need to do something incase there is an error... . .
     
     self.status.text = @"Contact Saved";
     
@@ -58,12 +61,21 @@
     NSFetchRequest *request = [NSFetchRequest new];
     [request setEntity:entityDesc];
     
+    /* 
+     
+    Need to see if I can find options for the predicate search that will allow me to 
+    search in the middle and the end of a string
+     
+    */
+    
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"(name = %@)", self.name.text];
     [request setPredicate:pred];
     NSManagedObject *matches = nil;
     
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request error:&error];
+    
+    // This returns an array - however, this will only display the first hit i.e., index [0]
     
     if ([objects count] == 0)
     {
