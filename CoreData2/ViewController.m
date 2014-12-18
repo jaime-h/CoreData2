@@ -50,7 +50,33 @@
 
 -(IBAction)findContact:(id)sender
 {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Contacts" inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [NSFetchRequest new];
+    [request setEntity:entityDesc];
+    
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(name = %@)", self.name.text];
+    [request setPredicate:pred];
+    NSManagedObject *matches = nil;
+    
+    NSError *error;
+    NSArray *objects = [context executeFetchRequest:request error:&error];
+    
+    if ([objects count] == 0)
+    {
+        self.status.text = @"No matches";
+    }
+    else
+    {
+        matches = objects[0];
+        self.address.text = [matches valueForKey:@"address"];
+        self.phone.text   = [matches valueForKey:@"phone"];
+        
+        self.status.text  = [NSString stringWithFormat:@"%lu matches found", (unsigned long) [objects count]];
+    }
 }
 
 
