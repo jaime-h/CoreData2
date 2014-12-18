@@ -15,7 +15,8 @@
 		6F24CE5D1A42555700E34077 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24CE5C1A42555700E34077 /* Images.xcassets */; };
 		6F24CE601A42555700E34077 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F24CE5E1A42555700E34077 /* LaunchScreen.xib */; };
 		6F24CE6C1A42555800E34077 /* CoreData2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24CE6B1A42555800E34077 /* CoreData2Tests.m */; };
-		6F24CE771A428FC100E34077 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24CE761A428FC100E34077 /* Contacts.m */; };
+		6F24CE7A1A42963B00E34077 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24CE791A42963B00E34077 /* Contacts.m */; };
+		6F24CE7D1A42963C00E34077 /* ContactOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24CE7C1A42963C00E34077 /* ContactOwner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +44,11 @@
 		6F24CE651A42555800E34077 /* CoreData2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreData2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F24CE6A1A42555800E34077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F24CE6B1A42555800E34077 /* CoreData2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreData2Tests.m; sourceTree = "<group>"; };
-		6F24CE751A428FC100E34077 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contacts.h; path = ManagedClasses/Contacts.h; sourceTree = "<group>"; };
-		6F24CE761A428FC100E34077 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contacts.m; path = ManagedClasses/Contacts.m; sourceTree = "<group>"; };
+		6F24CE781A42963B00E34077 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacts.h; sourceTree = "<group>"; };
+		6F24CE791A42963B00E34077 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacts.m; sourceTree = "<group>"; };
+		6F24CE7B1A42963C00E34077 /* ContactOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactOwner.h; sourceTree = "<group>"; };
+		6F24CE7C1A42963C00E34077 /* ContactOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactOwner.m; sourceTree = "<group>"; };
+		6F24CE7E1A42965400E34077 /* CoreData 2 v1.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodeld; path = "CoreData 2 v1.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 				6F24CE5C1A42555700E34077 /* Images.xcassets */,
 				6F24CE5E1A42555700E34077 /* LaunchScreen.xib */,
 				6F24CE531A42555700E34077 /* CoreData2.xcdatamodeld */,
-				6F24CE751A428FC100E34077 /* Contacts.h */,
-				6F24CE761A428FC100E34077 /* Contacts.m */,
+				6F24CE7B1A42963C00E34077 /* ContactOwner.h */,
+				6F24CE7C1A42963C00E34077 /* ContactOwner.m */,
+				6F24CE781A42963B00E34077 /* Contacts.h */,
+				6F24CE791A42963B00E34077 /* Contacts.m */,
 				6F24CE4C1A42555700E34077 /* Supporting Files */,
 			);
 			path = CoreData2;
@@ -229,8 +235,9 @@
 			files = (
 				6F24CE551A42555700E34077 /* CoreData2.xcdatamodeld in Sources */,
 				6F24CE521A42555700E34077 /* AppDelegate.m in Sources */,
+				6F24CE7A1A42963B00E34077 /* Contacts.m in Sources */,
+				6F24CE7D1A42963C00E34077 /* ContactOwner.m in Sources */,
 				6F24CE581A42555700E34077 /* ViewController.m in Sources */,
-				6F24CE771A428FC100E34077 /* Contacts.m in Sources */,
 				6F24CE4F1A42555700E34077 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,9 +444,10 @@
 		6F24CE531A42555700E34077 /* CoreData2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				6F24CE7E1A42965400E34077 /* CoreData 2 v1.xcdatamodel */,
 				6F24CE541A42555700E34077 /* CoreData2.xcdatamodel */,
 			);
-			currentVersion = 6F24CE541A42555700E34077 /* CoreData2.xcdatamodel */;
+			currentVersion = 6F24CE7E1A42965400E34077 /* CoreData 2 v1.xcdatamodel */;
 			path = CoreData2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

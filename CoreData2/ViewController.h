@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 
 #import "Contacts.h"
+#import "ContactOwner.h"
 
 @interface ViewController : UIViewController
 
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *address;
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 @property (strong, nonatomic) IBOutlet UILabel     *status;
+@property (strong, nonatomic) IBOutlet UITextField *owner;
 
 - (IBAction)saveData:(id)sender;
 - (IBAction)findContact:(id)sender;

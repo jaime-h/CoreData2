@@ -100,6 +100,23 @@
                                     <action selector="findContact:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Trw-ac-Rt4"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT3-87-gqB" userLabel="Owner">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="115" y="28" width="247" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbT-Bn-w1h">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="32" width="64" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -113,6 +130,8 @@
                                 <exclude reference="9w0-9W-z0k"/>
                                 <exclude reference="VZj-Tk-yjP"/>
                                 <exclude reference="N0f-tG-If8"/>
+                                <exclude reference="UT3-87-gqB"/>
+                                <exclude reference="WbT-Bn-w1h"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -126,18 +145,22 @@
                                 <include reference="9w0-9W-z0k"/>
                                 <include reference="VZj-Tk-yjP"/>
                                 <include reference="N0f-tG-If8"/>
+                                <include reference="UT3-87-gqB"/>
+                                <include reference="WbT-Bn-w1h"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="address" destination="2e9-I3-h9s" id="czi-1X-9xN"/>
                         <outlet property="name" destination="vj6-Az-aLN" id="eSo-PY-dm8"/>
+                        <outlet property="owner" destination="UT3-87-gqB" id="Z63-hY-gcM"/>
                         <outlet property="phone" destination="9w0-9W-z0k" id="ud6-Zz-cMs"/>
                         <outlet property="status" destination="jh6-UH-b0V" id="c4R-Y3-21s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="63" y="352"/>
         </scene>
     </scenes>
 </document>

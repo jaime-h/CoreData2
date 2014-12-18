@@ -14,5 +14,6 @@
 @dynamic address;
 @dynamic name;
 @dynamic phone;
+@dynamic owner;
 
 @end
