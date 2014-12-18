@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+#import "Contacts.h"
+
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *name;

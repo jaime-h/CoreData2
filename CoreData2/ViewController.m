@@ -29,13 +29,22 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSManagedObject *newContact;
+
+    //old way without the core data classes
+    //NSManagedObject *newContact;
+    //newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Contacts" inManagedObjectContext:context];
     
-    newContact = [NSEntityDescription insertNewObjectForEntityForName:@"Contacts" inManagedObjectContext:context];
+    // Saving context with the managed classes
+    Contacts *contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contacts" inManagedObjectContext:context];
+    
+    contact.name    = self.name.text;
+    contact.address = self.address.text;
+    contact.phone   = self.phone.text;
+    /*
     [newContact setValue:self.name.text    forKey:@"name"];
     [newContact setValue:self.address.text forKey:@"address"];
     [newContact setValue:self.phone.text   forKey:@"phone"];
-    
+    */
     self.name.text    = @"";
     self.address.text = @"";
     self.phone.text   = @"";
